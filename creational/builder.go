@@ -19,13 +19,11 @@ func (f *ManufacturingDirector) Construct() {
 	f.builder.SetSeats().SetStructure().SetWheels()
 }
 
-
 type VehicleProduct struct {
 	Wheels    int
 	Seats     int
 	Structure string
 }
-
 
 type CarBuilder struct {
 	vehicle VehicleProduct
@@ -50,8 +48,7 @@ func (c *CarBuilder) GetVehicle() VehicleProduct {
 	return c.vehicle
 }
 
-
-type BikeBuilder struct{
+type BikeBuilder struct {
 	vehicle VehicleProduct
 }
 

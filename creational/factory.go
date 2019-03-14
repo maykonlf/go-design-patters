@@ -1,7 +1,7 @@
 package creational
 
 import (
-	"github.com/pkg/errors"
+	"errors"
 	"fmt"
 )
 
@@ -25,13 +25,11 @@ func GetPaymentMethod(method int) (PaymentMethod, error) {
 	}
 }
 
-
 type CashPayment struct{}
 
 func (c *CashPayment) Pay(amount float32) string {
 	return fmt.Sprintf("%0.2f paid using cash\n", amount)
 }
-
 
 type DebitCardPayment struct{}
 
